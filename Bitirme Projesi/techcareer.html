@@ -12,54 +12,31 @@
       body {
         font-family: Arial, sans-serif;
       }
-      .navbar {
-        display: flex;
-        align-items: center;
-        padding: 10px 20px;
-        background-color: white;
-        border-bottom: 1px solid #e0e0e0;
+      .nav-link{
+        color: #1D1D1D;
       }
-      
-      .navbar .search-bar {
-        flex-grow: 1;
-        margin: 0 20px;
+      .dropdown-item:hover{
+        color: #00c26d;
       }
-      .navbar .search-bar input[type="text"] {
-        width: 100%;
-        padding: 8px 12px;
-        border: 1px solid #e0e0e0;
-        border-radius: 4px;
-        font-size: 16px;
-      }
-      .navbar .nav-links {
-        display: flex;
-        align-items: center;
-      }
-      .navbar .nav-links a {
-        margin: 0 15px;
-        font-size: 16px;
-        color: black;
-        text-decoration: none;
-        position: relative;
-      }
-      .navbar .nav-links a .dot {
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        width: 8px;
-        height: 8px;
-        background-color: #00b77d;
-        border-radius: 50%;
-      }
-      .navbar .auth-buttons a {
-        padding: 8px 16px;
+      #hoverText {
+        display: none;
+        background-color: black;
         color: white;
-        background-color: #00b77d;
-        border-radius: 4px;
-        text-decoration: none;
-        font-size: 16px;
-        margin-left: 20px;
-      }
+        padding: 5px 20px; /* Yüksekliği kısaltmak için padding üst ve alt 5px yapıldı */
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        z-index: 1000;
+        width: 450px; /* Genişliği daha büyük yapmak için width ayarlandı */
+        height: auto; /* İçeriğe göre yüksekliği otomatik ayarlansın */
+        text-align: center; /* Yazıyı ortalamak için */
+    }
+
+    /* Home üzerine gelindiğinde div'i göster */
+    .nav-item-home:hover #hoverText {
+        display: block;
+    }
+
       .carousel-image {
         max-width: 80%; /* Resmin genişliğini %80 ile sınırlamak için */
         max-height: 400px; /* Resmin maksimum yüksekliğini ayarlamak için */
@@ -88,53 +65,94 @@
       }
 
       .carousel-control-prev {
-        left: 375px; /* Sol kenara uzaklık */
+        left: 200px; /* Sol kenara uzaklık */
       }
 
       .carousel-control-next {
-        right: 375px; /* Sağ kenara uzaklık */
+        right: 200px; /* Sağ kenara uzaklık */
       }
 
     </style>
   </head>
   <body>
-    <div class="navbar">
-      <div class="logo">
-        <img src="wwwroot/img/techcareer-logo.svg" alt="">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+          <img src="wwwroot/img/techcareer-logo.svg" alt="">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <form class="d-flex me-auto ms-3">
+                  <input class="form-control" type="search" placeholder="Etkinlik, İş İlanı, Blog Ara" aria-label="Search">
+              </form>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button">
+                          Etkinlikler
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Bootcamp</a></li>
+                          <li><a class="dropdown-item" href="#">Hackathon</a></li>
+                          <li><a class="dropdown-item" href="#">Hiring Challenge</a></li>
+                          <li><a class="dropdown-item" href="#">Etkinlikler</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item nav-item-home position-relative">
+                    <a class="nav-link active" aria-current="page" href="#">İş İlanları</a>
+                    <!-- Home üzerine gelindiğinde gözükecek div -->
+                    <div id="hoverText">Yeni işinle sen de hayalindeki kariyere kavuşabilirsin! Senin için topladığımız iş fırsatlarını şimdi incele!</div>
+                </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Eğitimler</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownKomunite" role="button">
+                        Komunite
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Komuniteye Katıl</a></li>
+                        <li><a class="dropdown-item" href="#">TDC</a></li>
+                        <li><a class="dropdown-item" href="#">Blog</a></li>
+                        <li><a class="dropdown-item" href="#">Podcast</a></li>
+                        <li><a class="dropdown-item" href="#">Kariyer Rehberi</a></li>
+                        <li><a class="dropdown-item" href="#">Teknik Sözlük</a></li>
+                    </ul>
+                </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Şirketler</a>
+                  </li>
+              </ul>
+              <button type="button" class="btn btn-success">Giriş / Üye Ol</button>
+          </div>
       </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Search for Events, Jobs, Blogs..." />
-      </div>
-      <div class="nav-links">
-        <a href="#">Events</a>
-        <a href="#">Jobs</a>
-        <a href="#">Courses<span class="dot"></span></a>
-        <a href="#">Community</a>
-        <a href="#">Companies</a>
-      </div>
-      <div class="auth-buttons">
-        <a href="#">Log In / Sign Up</a>
-      </div>
-    </div>
+  </nav>
+
     <div id="carouselExample" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="3000">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
-            src="wwwroot/img/1.png"
+            src="wwwroot/img/10ekim_hiringday_1112_412_1_8815d62502.webp"
             class="d-block w-100 carousel-image"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
-            src="wwwroot/img/2.png"
+            src="wwwroot/img/TR_1112_412_de17b90249.webp"
             class="d-block w-100 carousel-image"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
-            src="wwwroot/img/3.png"
+            src="wwwroot/img/senior_aday_tecrubeli_yazilimci_2630787120.webp"
+            class="d-block w-100 carousel-image"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="wwwroot/img/Banner_TR_1112_412_6c2ce3564b.webp"
             class="d-block w-100 carousel-image"
             alt="..."
           />
@@ -159,7 +177,102 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    
+
+    <div class="container my-5">
+      <h2 class="text-center mb-4">Başvurunu Bekleyen Etkinlikler</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="wwwroot/img/1200x628_27_6832b12598.webp"
+              class="card-img-top"
+              alt="Node.js Workshop"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Node.js Workshop</h5>
+              <p class="card-text">
+                Ücretsiz öğren, mezun ol, iş fırsatı yakala!
+              </p>
+              <div class="d-flex justify-content-center mb-2 gap-2">
+                <span class="badge bg-secondary">Bootcamp</span>
+                <span class="badge bg-secondary">İş Fırsatı</span>
+              </div>
+              <p class="text-muted">Son Başvuru: 26.08.2024</p>
+              <a href="#" class="btn btn-success">Başvur</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="wwwroot/img/1200x628_1_b56ed3b165.webp"
+              class="card-img-top"
+              alt="PHP Prodigy: WebApp Development Bootcamp"
+            />
+            <div class="card-body">
+              <h5 class="card-title">PHP Prodigy: WebApp Development Bootcamp</h5>
+              <p class="card-text">
+                Ücretsiz öğren, mezun ol, iş fırsatı yakala!
+              </p>
+              <div class="d-flex justify-content-center mb-2 gap-2">
+                <span class="badge bg-secondary">Bootcamp</span>
+                <span class="badge bg-secondary">İş Fırsatı</span>
+              </div>
+              <p class="text-muted">Son Başvuru: 01.09.2024</p>
+              <a href="#" class="btn btn-success">Başvur</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="wwwroot/img/1200x628_8_adf347ebfd.webp"
+              class="card-img-top"
+              alt="C# Essentials Bootcamp"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                C# Essentials BootcampC# Essentials Bootcamp
+              </h5>
+              <p class="card-text">
+                Ücretsiz öğren, mezun ol, iş fırsatı yakala!
+              </p>
+              <div class="d-flex justify-content-center mb-2 gap-2">
+                <span class="badge bg-secondary">Bootcamp</span>
+                <span class="badge bg-secondary">İş Fırsatı</span>
+              </div>
+              <p class="text-muted">Son Başvuru: 02.09.2024</p>
+              <a href="#" class="btn btn-success">Başvur</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#" class="btn btn-success">Tüm Etkinlikleri Gör</a>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+      // Dropdown'ı hover ile açmak için jQuery kullanarak bir çözüm:
+      document.addEventListener("DOMContentLoaded", function(){
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(function(dropdown) {
+                dropdown.addEventListener('mouseover', function() {
+                    this.classList.add('show');
+                    this.querySelector('.dropdown-menu').classList.add('show');
+                });
+                dropdown.addEventListener('mouseout', function() {
+                    this.classList.remove('show');
+                    this.querySelector('.dropdown-menu').classList.remove('show');
+                });
+            });
+        });
+  </script>
   </body>
 </html>
+
