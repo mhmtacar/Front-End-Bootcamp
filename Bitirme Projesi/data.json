@@ -1,0 +1,44 @@
+{
+    "carouselItems": [
+      {
+        "src": "wwwroot/img/10ekim_hiringday_1112_412_1_8815d62502.webp",
+        "alt": "Etkinlik 1"
+      },
+      {
+        "src": "wwwroot/img/TR_1112_412_de17b90249.webp",
+        "alt": "Etkinlik 2"
+      },
+      {
+        "src": "wwwroot/img/senior_aday_tecrubeli_yazilimci_2630787120.webp",
+        "alt": "Etkinlik 3"
+      },
+      {
+        "src": "wwwroot/img/Banner_TR_1112_412_6c2ce3564b.webp",
+        "alt": "Etkinlik 4"
+      }
+    ],
+    "cards": [
+      {
+        "imgSrc": "wwwroot/img/1200x628_1_b56ed3b165.webp",
+        "title": "PHP Prodigy: WebApp Development Bootcamp",
+        "text": "Ücretsiz öğren, mezun ol, iş fırsatı yakala!",
+        "date": "01.09.2024",
+        "link": "#"
+      },
+      {
+        "imgSrc": "wwwroot/img/1200x628_8_adf347ebfd.webp",
+        "title": "C# Essentials Bootcamp",
+        "text": "Ücretsiz öğren, mezun ol, iş fırsatı yakala!",
+        "date": "02.09.2024",
+        "link": "#"
+      },
+      {
+        "imgSrc": "wwwroot/img/1200x628_24_337419769a.webp",
+        "title": "Business Intelligence MSSQL Workshop",
+        "text": "Ücretsiz öğren, mezun ol, iş fırsatı yakala!",
+        "date": "02.09.2024",
+        "link": "#"
+      }
+    ]
+  }
+  
