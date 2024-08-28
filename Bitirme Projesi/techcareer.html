@@ -135,6 +135,81 @@
         background-color: #00a55b; /* Slightly darker shade for hover effect */
         border-color: #00a55b;
       }
+
+      .container.text-center h2,
+      h5 {
+        font-weight: bold; /* Make the text bold */
+      }
+      .container h2 {
+        font-weight: bold;
+      }
+
+      .card-title {
+        font-weight: bold;
+      }
+
+      .nav-item {
+        font-weight: bold;
+      }
+
+      .hero-section {
+        background-color: #f3fff6;
+        padding: 40px 20px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .hero-content {
+        max-width: 65%;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .hero-content p {
+        font-size: 1.15rem;
+        margin-bottom: 20px;
+      }
+
+      .btn-custom {
+        background-color: #00c26d;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+      }
+
+      .btn-custom:hover {
+        background-color: #009933;
+      }
+
+      .testimonial {
+        height: 100px; /* Yüksekliği ayarlayabilirsiniz */
+        overflow-y: auto;
+        margin-top: 30px;
+      }
+      .name {
+        margin-left: 30px;
+      }
+
+      .container-card {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+        margin-top: 50px;
+      }
+      .container-card .card3 {
+        text-align: center;
+        width: 30%;
+      }
+      .card3 img {
+        width: 100px;
+      }
     </style>
   </head>
   <body>
@@ -296,6 +371,60 @@
         </div>
       </div>
     </div>
+
+    <div class="container">
+      <div class="hero-section">
+        <div class="hero-content">
+          <h1>Kariyer Rehberi’yle Geliş</h1>
+          <p>
+            <span style="color: #00c851"
+              >Yeni teknoloji kariyerini seçmeye hazır mısın?</span
+            >
+          </p>
+          <p>
+            Teknoloji alanında kariyer yapmak istiyor ancak hangi pozisyonu
+            seçeceğini veya seçtiğin pozisyonda hangi adımlardan geçmen
+            gerektiğini bilmiyorsan, Kariyer Rehberi ile en doğru yerdesin!
+          </p>
+          <button class="btn btn-custom">Hemen İncele</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <h2 class="text-center">Bizi Katılımcılarımızdan Dinle</h2>
+      <div
+        id="testimonialCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner" id="carousel-content">
+          <!-- Dynamic content will be injected here -->
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="text-center mt-3">
+        <button class="btn btn-success">Tüm Yorumları Gör</button>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -365,6 +494,47 @@
           })
           .catch((error) => console.error("Error loading the data:", error));
       });
+
+      fetch("data.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const carouselContent = document.getElementById("carousel-content");
+          let slideItem = "";
+          data.testimonials.forEach((participant, index) => {
+            if (index % 2 === 0) {
+              // Start a new slide for every two participants
+              if (index !== 0) {
+                slideItem += "</div></div>"; // Close the previous slide
+              }
+              slideItem += `<div class="carousel-item ${
+                index === 0 ? "active" : ""
+              }"><div class="row">`;
+            }
+            slideItem += `
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <img src="${participant.image}" alt="${participant.name}" />
+                                        <div class="name">
+                                            <h5>${participant.name}</h5>
+                                            <p class="text-muted">${participant.bootcamp}</p>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial">
+                                        <p>${participant.text}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+          });
+          slideItem += "</div></div>"; // Close the last slide
+          carouselContent.innerHTML = slideItem;
+        })
+        .catch((error) =>
+          console.error("Error fetching participant data:", error)
+        );
     </script>
   </body>
 </html>

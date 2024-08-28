@@ -1,44 +1,69 @@
 {
-    "carouselItems": [
-      {
-        "src": "wwwroot/img/10ekim_hiringday_1112_412_1_8815d62502.webp",
-        "alt": "Etkinlik 1"
-      },
-      {
-        "src": "wwwroot/img/TR_1112_412_de17b90249.webp",
-        "alt": "Etkinlik 2"
-      },
-      {
-        "src": "wwwroot/img/senior_aday_tecrubeli_yazilimci_2630787120.webp",
-        "alt": "Etkinlik 3"
-      },
-      {
-        "src": "wwwroot/img/Banner_TR_1112_412_6c2ce3564b.webp",
-        "alt": "Etkinlik 4"
-      }
-    ],
-    "cards": [
-      {
-        "imgSrc": "wwwroot/img/1200x628_1_b56ed3b165.webp",
-        "title": "PHP Prodigy: WebApp Development Bootcamp",
-        "text": "Ücretsiz öğren, mezun ol, iş fırsatı yakala!",
-        "date": "01.09.2024",
-        "link": "#"
-      },
-      {
-        "imgSrc": "wwwroot/img/1200x628_8_adf347ebfd.webp",
-        "title": "C# Essentials Bootcamp",
-        "text": "Ücretsiz öğren, mezun ol, iş fırsatı yakala!",
-        "date": "02.09.2024",
-        "link": "#"
-      },
-      {
-        "imgSrc": "wwwroot/img/1200x628_24_337419769a.webp",
-        "title": "Business Intelligence MSSQL Workshop",
-        "text": "Ücretsiz öğren, mezun ol, iş fırsatı yakala!",
-        "date": "02.09.2024",
-        "link": "#"
-      }
-    ]
-  }
-  
+  "carouselItems": [
+    {
+      "src": "wwwroot/img/10ekim_hiringday_1112_412_1_8815d62502.webp",
+      "alt": "Etkinlik 1"
+    },
+    {
+      "src": "wwwroot/img/TR_1112_412_de17b90249.webp",
+      "alt": "Etkinlik 2"
+    },
+    {
+      "src": "wwwroot/img/senior_aday_tecrubeli_yazilimci_2630787120.webp",
+      "alt": "Etkinlik 3"
+    },
+    {
+      "src": "wwwroot/img/Banner_TR_1112_412_6c2ce3564b.webp",
+      "alt": "Etkinlik 4"
+    }
+  ],
+  "cards": [
+    {
+      "imgSrc": "wwwroot/img/1200x628_1_b56ed3b165.webp",
+      "title": "PHP Prodigy: WebApp Development Bootcamp",
+      "text": "Ücretsiz öğren, mezun ol, iş fırsatı yakala!",
+      "date": "01.09.2024",
+      "link": "#"
+    },
+    {
+      "imgSrc": "wwwroot/img/1200x628_8_adf347ebfd.webp",
+      "title": "C# Essentials Bootcamp",
+      "text": "Ücretsiz öğren, mezun ol, iş fırsatı yakala!",
+      "date": "02.09.2024",
+      "link": "#"
+    },
+    {
+      "imgSrc": "wwwroot/img/1200x628_24_337419769a.webp",
+      "title": "Business Intelligence MSSQL Workshop",
+      "text": "Ücretsiz öğren, mezun ol, iş fırsatı yakala!",
+      "date": "02.09.2024",
+      "link": "#"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Melike Aydın",
+      "bootcamp": "Hyper Company Front-End Angular Bootcamp",
+      "image": "wwwroot/img/Melike_Aydin_d81bfb3098 (1).webp",
+      "text": "Angular bootcampine katılmadan önce, Angular konusunda hiç bilgim olmadığını belirtmek isterim. Ancak TechCareer aracılığıyla Hyper company’nin düzenlediği bu bootcamp, beklentilerimin ötesine geçti. Yoğun bir eğitim programı olmasına rağmen, her bir oturum, kapsamlı bir şekilde Angular’ı öğrenmeme ve uygulamama olanak sağladı. Bootcamp boyunca, gerçek dünya projelerinde uygulamalı deneyim kazanma fırsatım oldu. Bu, sadece teorik bilgiyi değil, aynı zamanda pratik becerileri de geliştirmeme olanak tanıdı. Eğitimin yoğunluğuna rağmen, her anı keyifli ve öğreticiydi. Eğitmenlerin ve diğer katılımcıların desteğiyle, Angular’ı anlamak ve etkili bir şekilde kullanmak konusunda büyük bir ilerleme kaydettim. Sonuç olarak, bu bootcamp, Angular’ı öğrenmek isteyen herkese şiddetle tavsiye edeceğim bir deneyimdi. Bu değerli deneyim için eğitmenimize, TechCareer ve Hyper company ekibine çok teşekkür ederim."
+    },
+    {
+      "name": "Fatih Başol",
+      "bootcamp": "Back-end Bootcamp",
+      "image": "wwwroot/img/Fatih_Basol_f6b1c1c405.webp",
+      "text": "Back-End Bootcamp ile çok eğlenceli ve bilgi dolu bir süreç geçirdim. Bu süreçte eğlendim, arkadaşlıklar edindim ve sektöre yönelik bir çok deneyim kazandım. Hem eğitmenimizin hem de Techcareer ekibinin ilgisi ise oldukça yüksekti. Ayrıca bootcamp sonunda ise istediğim pozisyonda işe başladım. Kısacası kariyerimin başında büyük bir etkisi olan çok güzel bir dönem geçirdim diyebilirim. Tüm Techcareer.net ekibine teşekkürler."
+    },
+    {
+      "name": "Berka Can Öztürk",
+      "bootcamp": "Tech Recruitment Bootcamp",
+      "image": "wwwroot/img/Berke_Can_Ozturk_2e929ec8be.webp",
+      "text": "Tech Recruitment Bootcamp'i inanılmaz bir yolculuktu ve benim için kesinlikle unutulmaz bir deneyim oldu. İlk andan itibaren pozitif olan tutum son güne kadar devam etti. Bu süre zarfı içerisinde hem kendimi geliştirme fırsatı yakaladım hem de hayalini kurduğum alanda ilk deneyimimi yaşamış oldum. Bootcamp boyunca bizleri yalnız bırakmayan bildiklerini aktaran eğitmenlere, mentorluk desteği sağlayan yöneticilere, süreçte birlikte keyifle ilerlediğim arkadaşlarıma ve arka planda organize eden Techcareer.net ailesine en içten dileklerimle teşekkür ediyorum."
+    },
+    {
+      "name": "Yavuz Balı",
+      "bootcamp": "Data Science Bootcamp",
+      "image": "wwwroot/img/Yavuz_Bali_f90094aa29.webp",
+      "text": "Sıcak bir karşılama, eğlenceli ve yoğun bir program ile birlikte benim için oldukça keyifli bir programdı. Bir çok şey öğrenmenin yanında bootcamp’e katılan farklı ve donanımlı insanlarla tanışma fırsatım oldu. Geriye bakıp düşününce iyi ki katılmışım dediğim bir bootcamp’ti benim için. Emeği geçen herkese teşekkürler."
+    }
+  ]
+}
