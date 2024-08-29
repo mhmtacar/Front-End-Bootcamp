@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  .nav-link {
+    color: #1d1d1d;
+  }
+  .input-container {
+    position: relative;
+    width: 300px; /* Set the desired width here */
+    margin-left: 30px;
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #ccc;
+    font-size: 16px;
+  }
+
+  .form-control {
+    padding-left: 35px; /* Adjust this value to ensure text doesn't overlap with the icon */
+    width: 100%; /* Ensures the input takes up the full width of the container */
+  }
+
+  .navbar-nav {
+    margin-left: 30px;
+  }
+
+  .dropdown-item:hover {
+    color: #00c26d;
+  }
+  #hoverText {
+    display: none;
+    background-color: black;
+    color: white;
+    padding: 5px 20px;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    z-index: 1000;
+    width: 450px;
+    height: auto;
+    text-align: center;
+  }
+  .nav-item-home:hover #hoverText {
+    display: block;
+  }
+  .carousel-image {
+    max-width: 80%;
+    max-height: 400px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%;
+    height: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 1000;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-size: 100%, 100%;
+  }
+  .carousel-control-prev {
+    left: 200px;
+  }
+  .carousel-control-next {
+    right: 200px;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .card-title {
+    min-height: 3em; /* Adjust this value to fit the expected height of the longest title */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .card-text {
+    font-size: 0.875rem; /* Reduce the font size */
+    text-align: center; /* Center the text */
+    margin-top: auto; /* Push the text to the bottom */
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+  }
+
+  .card-footer .text-muted {
+    margin: 0;
+  }
+
+  .text-muted {
+    margin-top: 30px;
+  }
+
+  .btn-success {
+    background-color: #00c26d;
+    border-color: #00c26d;
+  }
+
+  .btn-success:hover {
+    background-color: #00a55b; /* Slightly darker shade for hover effect */
+    border-color: #00a55b;
+  }
+
+  .container.text-center h2,
+  h5 {
+    font-weight: bold; /* Make the text bold */
+  }
+  .container h2 {
+    font-weight: bold;
+  }
+
+  .card-title {
+    font-weight: bold;
+  }
+
+  .nav-item {
+    font-weight: bold;
+  }
+
+  .hero-section {
+    background-color: #f3fff6;
+    padding: 40px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero-content {
+    max-width: 65%;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .hero-content p {
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+  }
+
+  .btn-custom {
+    background-color: #00c26d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .btn-custom:hover {
+    background-color: #009933;
+  }
+
+  .testimonial {
+    height: 100px; /* Yüksekliği ayarlayabilirsiniz */
+    overflow-y: auto;
+    margin-top: 30px;
+  }
+  .name {
+    margin-left: 30px;
+  }
+
+  .container-card {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    margin-top: 50px;
+  }
+  .container-card .card3 {
+    text-align: center;
+    width: 30%;
+  }
+  .card3 img {
+    width: 100px;
+  }
