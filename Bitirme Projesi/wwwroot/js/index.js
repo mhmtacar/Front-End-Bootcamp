@@ -1,43 +1,41 @@
 // Dropdown'ı hover ile açmak için jQuery kullanarak bir çözüm:
 document.addEventListener("DOMContentLoaded", function () {
-    const dropdowns = document.querySelectorAll(".dropdown");
-    dropdowns.forEach(function (dropdown) {
-      dropdown.addEventListener("mouseover", function () {
-        this.classList.add("show");
-        this.querySelector(".dropdown-menu").classList.add("show");
-      });
-      dropdown.addEventListener("mouseout", function () {
-        this.classList.remove("show");
-        this.querySelector(".dropdown-menu").classList.remove("show");
-      });
+  const dropdowns = document.querySelectorAll(".dropdown");
+  dropdowns.forEach(function (dropdown) {
+    dropdown.addEventListener("mouseover", function () {
+      this.classList.add("show");
+      this.querySelector(".dropdown-menu").classList.add("show");
+    });
+    dropdown.addEventListener("mouseout", function () {
+      this.classList.remove("show");
+      this.querySelector(".dropdown-menu").classList.remove("show");
     });
   });
-  document.addEventListener("DOMContentLoaded", function () {
-    fetch("data.json")
-      .then((response) => response.json())
-      .then((data) => {
-        // Carousel
-        const carouselInner = document.querySelector(".carousel-inner");
-        data.carouselItems.forEach((item, index) => {
-          const carouselItem = document.createElement("div");
-          carouselItem.classList.add("carousel-item");
-          if (index === 0) {
-            carouselItem.classList.add("active");
-          }
-          carouselItem.innerHTML = `
+});
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("data.json")
+    .then((response) => response.json())
+    .then((data) => {
+      // Carousel
+      const carouselInner = document.querySelector(".carousel-inner");
+      data.carouselItems.forEach((item, index) => {
+        const carouselItem = document.createElement("div");
+        carouselItem.classList.add("carousel-item");
+        if (index === 0) {
+          carouselItem.classList.add("active");
+        }
+        carouselItem.innerHTML = `
       <img src="${item.src}" class="d-block w-100 carousel-image" alt="${item.alt}" />
     `;
-          carouselInner.appendChild(carouselItem);
-        });
+        carouselInner.appendChild(carouselItem);
+      });
 
-        // Cards
-        const cardContainer = document.querySelector(
-          ".container.my-5 .row"
-        );
-        data.cards.forEach((card) => {
-          const cardColumn = document.createElement("div");
-          cardColumn.classList.add("col-md-4");
-          cardColumn.innerHTML = `
+      // Cards
+      const cardContainer = document.querySelector(".container.my-5 .row");
+      data.cards.forEach((card) => {
+        const cardColumn = document.createElement("div");
+        cardColumn.classList.add("col-md-4");
+        cardColumn.innerHTML = `
           <div class="card h-100">
             <img src="${card.imgSrc}" class="card-img-top" alt="${card.title}" />
             <div class="card-body">
@@ -55,28 +53,28 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         `;
 
-          cardContainer.appendChild(cardColumn);
-        });
-      })
-      .catch((error) => console.error("Error loading the data:", error));
-  });
+        cardContainer.appendChild(cardColumn);
+      });
+    })
+    .catch((error) => console.error("Error loading the data:", error));
+});
 
-  fetch("data.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const carouselContent = document.getElementById("carousel-content");
-      let slideItem = "";
-      data.testimonials.forEach((participant, index) => {
-        if (index % 2 === 0) {
-          // Start a new slide for every two participants
-          if (index !== 0) {
-            slideItem += "</div></div>"; // Close the previous slide
-          }
-          slideItem += `<div class="carousel-item ${
-            index === 0 ? "active" : ""
-          }"><div class="row">`;
+fetch("data.json")
+  .then((response) => response.json())
+  .then((data) => {
+    const carouselContent = document.getElementById("carousel-content");
+    let slideItem = "";
+    data.testimonials.forEach((participant, index) => {
+      if (index % 2 === 0) {
+        // Start a new slide for every two participants
+        if (index !== 0) {
+          slideItem += "</div></div>"; // Close the previous slide
         }
-        slideItem += `
+        slideItem += `<div class="carousel-item ${
+          index === 0 ? "active" : ""
+        }"><div class="row">`;
+      }
+      slideItem += `
                     <div class="col-md-6">
                         <div class="card">
                             <div class="card-body">
@@ -94,16 +92,26 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     </div>
                 `;
-      });
-      slideItem += "</div></div>"; // Close the last slide
-      carouselContent.innerHTML = slideItem;
-    })
-    .catch((error) =>
-      console.error("Error fetching participant data:", error)
-    );
+    });
+    slideItem += "</div></div>"; // Close the last slide
+    carouselContent.innerHTML = slideItem;
+  })
+  .catch((error) => console.error("Error fetching participant data:", error));
 
-    document.addEventListener("DOMContentLoaded", function () {
-        fetch('header.html')
-                .then(response => response.text())
-                .then(data => document.getElementById('header').innerHTML = data);
-            });
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("header.html")
+    .then((response) => response.text())
+    .then((data) => (document.getElementById("header").innerHTML = data));
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("footer.html")
+      .then((response) => response.text())
+      .then((data) => (document.getElementById("footer").innerHTML = data));
+  });
+  
+  document.addEventListener("DOMContentLoaded", function () {
+      fetch("whytechcareer.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("whytechcareer").innerHTML = data));
+    });
