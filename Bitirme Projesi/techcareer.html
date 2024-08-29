@@ -14,87 +14,12 @@
     />
 
     <link rel="stylesheet" href="wwwroot/css/styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <div class="container">
-        <img src="wwwroot/img/techcareer-logo.svg" alt="" />
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <div class="input-container">
-            <i class="fas fa-search search-icon"></i>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Etkinlik, İş İlanı, Blog Ara"
-            />
-          </div>
-
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-              >
-                Etkinlikler
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Bootcamp</a></li>
-                <li><a class="dropdown-item" href="#">Hackathon</a></li>
-                <li><a class="dropdown-item" href="#">Hiring Challenge</a></li>
-                <li><a class="dropdown-item" href="#">Etkinlikler</a></li>
-              </ul>
-            </li>
-            <li class="nav-item nav-item-home position-relative">
-              <a class="nav-link active" aria-current="page" href="#"
-                >İş İlanları</a
-              >
-              <div id="hoverText">
-                Yeni işinle sen de hayalindeki kariyere kavuşabilirsin! Senin
-                için topladığımız iş fırsatlarını şimdi incele!
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Eğitimler</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdownKomunite"
-                role="button"
-              >
-                Komunite
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Komuniteye Katıl</a></li>
-                <li><a class="dropdown-item" href="#">TDC</a></li>
-                <li><a class="dropdown-item" href="#">Blog</a></li>
-                <li><a class="dropdown-item" href="#">Podcast</a></li>
-                <li><a class="dropdown-item" href="#">Kariyer Rehberi</a></li>
-                <li><a class="dropdown-item" href="#">Teknik Sözlük</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Şirketler</a>
-            </li>
-          </ul>
-          <button type="button" class="btn btn-success">Giriş / Üye Ol</button>
-        </div>
-      </div>
-    </nav>
+    
+    <div id="header"></div>
 
     <div
       id="carouselExample"
@@ -227,6 +152,140 @@
         <button class="btn btn-success">Tüm Yorumları Gör</button>
       </div>
     </div>
+
+    <div class="container-card">
+      <div class="card3">
+        <img src="wwwroot/img/eventsbar-bootcamp.svg" class="mb-3" alt="" />
+        <h2>Bootcamp</h2>
+        <p>
+          Bootcamp etkinlikleri, yazılım teknolojileri, veri bilimi, ürün
+          yönetimi gibi teknolojik konularda düzenlenir. Hem eğitim alabilir,
+          hem de o alanda işe başlayabilecek kadar fazla bilgi ve donanım
+          kazanabilirsin.
+        </p>
+        <a href="#" class="apply">Hemen Başvur</a>
+      </div>
+
+      <div class="card3">
+        <img src="wwwroot/img/eventsbar-hackathon.svg" class="mb-3" alt="" />
+        <h2>Hackathon</h2>
+        <p>
+          Hackathon etkinliklerinde takımlar halinde veya bireysel olarak
+          yarışacaksın. Etkinlik için belli bir zaman verilir ve yeni fikirler,
+          yeni dijital ürünler üretmesi, sonra da bunları kodlaması istenir.
+        </p>
+        <a href="#" class="apply">Hemen Başvur</a>
+      </div>
+
+      <div class="card3">
+        <img src="wwwroot/img/eventsbar-hiring.svg" class="mb-3" alt="" />
+        <h2>Hiring Challenge</h2>
+        <p>
+          Hiring Challenge yarışmalarında Android, iOS, algoritma veya kod
+          hatası gibi problemleri belirli bir zaman aralığı içerisinde çözmeye
+          çalışacaksın. Bu yarışmalarda algoritma tasarımına, özgünlüğe ve kod
+          kalitesine göre puan alırsın.
+        </p>
+        <a href="#" class="apply">Hemen Başvur</a>
+      </div>
+    </div>
+
+    <div class="container text-center mt-5">
+      <div class="card4 p-4">
+        <h2 class="mb-3" style="color: white;">Şirketiniz için Teknoloji yeteneği mi arıyorsunuz?</h2>
+        <h4 style="color: white;">
+          Birlikte etkinlik düzenlemek ve size ulaşmamız için şirket e-mail
+          adresinizi girin!
+        </h4>
+        <div class="d-flex justify-content-center">
+          <div class="input-group mb-3 w-50">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Şirket E-Mail Adresiniz"
+              aria-label="Şirket E-Mail Adresiniz"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-success" type="button">Gönder</button>
+            </div>
+          </div>
+        </div>
+        <p class="question">Tüm soru ve önerileriniz için;</p>
+        <p>
+          <a href="mailto:hello@techcareer.net"
+            >hello@techcareer.net | 0216 468 76 00</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-2 col-md-6 mb-4">
+                  <h5>TECHCAREER</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#">Hakkımızda</a></li>
+                      <li><a href="#">Etkinlikler</a></li>
+                      <li><a href="#">Şirketler İçin</a></li>
+                      <li><a href="#">Eğitmen Ol</a></li>
+                      <li><a href="#">İş Birliği</a></li>
+                      <li><a href="#">İletişim</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-2 col-md-6 mb-4">
+                  <h5>BAŞVUR</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#">Bootcamp</a></li>
+                      <li><a href="#">Hackathon</a></li>
+                      <li><a href="#">Hiring Challenge</a></li>
+                      <li><a href="#">İş İlanları</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-2 col-md-6 mb-4">
+                  <h5>SENİN İÇİN</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#">Komünite</a></li>
+                      <li><a href="#">TDC</a></li>
+                      <li><a href="#">Blog</a></li>
+                      <li><a href="#">Podcast</a></li>
+                      <li><a href="#">Kariyer Rehberi</a></li>
+                      <li><a href="#">Teknik Sözlük</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-2 col-md-6 mb-4">
+                  <h5>VERİ POLİTİKAMIZ</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#">Aydınlatma Metni</a></li>
+                      <li><a href="#">Hizmet Sözleşmesi</a></li>
+                      <li><a href="#">Açık Rıza Metni</a></li>
+                      <li><a href="#">Çerez Politikası</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-4 col-md-12 mb-4 text-center text-lg-start">
+                  <img src="wwwroot/img/techcareer-logo.svg" alt="">
+                  <p class="paragraph">Türkiye’nin teknoloji kariyeri platformu</p>
+                  <div class="social-icons">
+                      <a href="#"><i class="bi bi-x"></i></a>
+                      <a href="#"><i class="bi bi-instagram"></i></a>
+                      <a href="#"><i class="bi bi-linkedin"></i></a>
+                      <a href="#"><i class="bi bi-youtube"></i></a>
+                      <a href="#"><i class="bi bi-facebook"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="row mt-4">
+              <div class="col-lg-6 text-start">
+                  <p class="language-switch">TR | EN</p>
+              </div>
+              <div class="col-lg-6 text-end">
+                  <p class="copyright mb-0">
+                      Tüm hakları saklıdır &copy; Copyright 2024 <a href="mailto:support@techcareer.net">support@techcareer.net</a>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

@@ -194,3 +194,90 @@ body {
   .card3 img {
     width: 100px;
   }
+
+  .icon {
+    font-size: 50px;
+  }
+  .icon h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .icon p {
+    font-size: 16px;
+    color: #555;
+  }
+  .apply {
+    color: #28a745;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .apply:hover {
+    text-decoration: underline;
+  }
+
+  .card4 {
+    background-color: #293349; /* Kartın arka plan rengini daha açık bir mavi tonuna ayarladım */
+    border: none; /* Kenarlıkları kaldırdım */
+  }
+
+  .btn-success {
+    background-color: #28a745; /* Butonun rengini yeşil olarak ayarladım */
+  }
+
+  .input-group-text {
+    background-color: #ffffff; /* Input alanının arka planını beyaz olarak ayarladım */
+    color: #2c3e50; /* Yazı rengini koyu mavi olarak ayarladım */
+  }
+
+  a {
+    color: white;
+    text-decoration: none; /* Alt çizgi yok */
+  }
+
+  .input-group {
+    width: 50%; /* Input alanını ortalamak için genişlik ayarlandı */
+    margin-top: 30px;
+  }
+
+  .form-control {
+    height: 3rem; /* Input alanının yüksekliğini ayarlamak için */
+    padding: 0.375rem 0.75rem; /* İç boşluklar ayarlandı */
+  }
+
+  .question {
+    color: #00c26d;
+    margin-top: 20px;
+  }
+
+  .footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    color: #6c757d;
+}
+.footer a {
+    text-decoration: none;
+    color: black
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.social-icons a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #6c757d;
+}
+.social-icons a:hover {
+    color: #000;
+}
+.language-switch {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+.copyright {
+    font-size: 0.8rem;
+    margin-top: 20px;
+    color: #adb5bd;
+}
+.paragraph{
+    margin-top: 15px;
+}
