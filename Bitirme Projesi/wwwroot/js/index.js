@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => console.error("Error loading the data:", error));
 });
 
+document.addEventListener("DOMContentLoaded", function () {
 fetch("data.json")
   .then((response) => response.json())
   .then((data) => {
@@ -97,6 +98,29 @@ fetch("data.json")
     carouselContent.innerHTML = slideItem;
   })
   .catch((error) => console.error("Error fetching participant data:", error));
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+      const container = document.getElementById('testimonial-container');
+      data.allparticipants.forEach(item => {
+          const card = document.createElement('div');
+          card.className = 'col-md-4 d-flex';
+          card.innerHTML = `
+              <div class="testimonial-card text-center">
+                  <img src="${item.image}" alt="${item.name} Fotoğrafı">
+                  <p>${item.feedback}</p>
+                  <h6>${item.name}</h6>
+                  <small>${item.course}</small>
+              </div>
+          `;
+          container.appendChild(card);
+      });
+  })
+  .catch(error => console.error('Error:', error));
+    });
 
 document.addEventListener("DOMContentLoaded", function () {
   fetch("header.html")

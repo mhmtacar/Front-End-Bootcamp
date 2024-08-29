@@ -281,3 +281,83 @@ body {
 .paragraph{
     margin-top: 15px;
 }
+
+.background-section {
+  background-color: #1f2a44;
+  color: white;
+  padding: 60px 0;
+  position: relative;
+}
+
+.background-section .breadcrumb {
+  background-color: transparent;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.background-section .breadcrumb-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.background-section .breadcrumb-item a:hover{
+  text-decoration: underline;
+}
+
+.background-section .breadcrumb-item.active {
+  color: white;
+}
+
+.background-section h1 {
+  color: #3ace6d;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.background-section h1 span {
+  color: white;
+}
+
+.background-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.background-section .btn {
+  background-color: #3ace6d;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+.background-section .graphic {
+  position: absolute;
+  right: 10%;
+  top: 20px;
+  width: 300px;
+  height: auto;
+}
+
+.testimonial-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+.testimonial-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.testimonial-card p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.testimonial-card h6 {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.testimonial-card small {
+  color: #777;
+}
