@@ -122,10 +122,31 @@ document.addEventListener("DOMContentLoaded", function () {
   .catch(error => console.error('Error:', error));
     });
 
-document.addEventListener("DOMContentLoaded", function () {
-  fetch("header.html")
-    .then((response) => response.text())
-    .then((data) => (document.getElementById("header").innerHTML = data));
+// Load the navbar from the external file and insert it into the placeholder div
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('header').innerHTML = data;
+
+          // Hover functionality for multiple dropdown menus
+          const dropdowns = document.querySelectorAll('.dropdown');
+
+          dropdowns.forEach(dropdown => {
+              const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+              const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+
+              dropdown.addEventListener('mouseenter', function() {
+                  dropdownToggle.classList.add('show');
+                  dropdownMenu.classList.add('show');
+              });
+
+              dropdown.addEventListener('mouseleave', function() {
+                  dropdownToggle.classList.remove('show');
+                  dropdownMenu.classList.remove('show');
+              });
+          });
+      });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
